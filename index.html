@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Showroom Mobil Modern</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .navbar {
+      background-color: #111;
+      color: white;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #f1c40f !important;
+    }
+
+    .sidebar {
+      height: 100vh;
+      background-color: #1c1c1c;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding-top: 70px;
+      width: 220px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #bbb;
+      padding: 12px 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #f1c40f;
+      color: black;
+    }
+
+    main {
+      margin-left: 220px;
+      padding: 40px;
+    }
+
+    .hero {
+      background: url('baground.jpg') center/cover;
+      height: 400px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .card img {
+      height: 180px;
+      object-fit: cover;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    .btn-custom {
+      background-color: #f1c40f;
+      color: black;
+      border: none;
+    }
+
+    .btn-custom:hover {
+      background-color: #d4ac0d;
+      color: white;
+    }
+
+   /* Tombol Bling Premium */
+.btn-bling-premium {
+  position: relative;
+  display: inline-block;
+  padding: 20px 50px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #fff;
+  background: linear-gradient(135deg, #ada068, #38311f, #ffd54f);
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek cahaya berkilau */
+.btn-bling-premium::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.7) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  animation: shimmer 4s infinite;
+}
+
+/* Animasi kilau lembut */
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+/* Efek hover */
+.btn-bling-premium:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px rgba(255, 220, 100, 0.9);
+  background: linear-gradient(135deg, #ffdf40, #69572e, #ffd54f);
+}
+
+</style>
+
+ 
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">🚘 ShowroomMobil</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-light" href="#home">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="produk.html">Produk Kami</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h5 class="text-center text-warning mb-4">MENU</h5>
+    <a href="#home"><i class="bi bi-house-door"></i> Home</a>
+    <a href="#produk"><i class="bi bi-car-front"></i> Koleksi Mobil</a>
+    <a href="#layanan"><i class="bi bi-wrench-adjustable"></i> Layanan</a>
+    <a href="#kontak"><i class="bi bi-envelope"></i> Hubungi Kami</a>
+  </div>
+
+  <!-- Konten Utama -->
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <h1>Temukan Mobil Impian Anda</h1>
+      <p>Showroom Mobil Modern — Kualitas, Kenyamanan, dan Gaya</p>
+      
+    </section>
+
+    <!-- Produk Mobil -->
+    <section id="produk" class="mt-5">
+      <h2 class="text-center mb-4 fw-bold">Koleksi Mobil Kami</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="produk 2" class="card-img-top" alt="VERTURER">
+            <div class="card-body">
+              <h5 class="card-title">VERTURER</h5>
+              <p class="card-text">Ruang luas, cocok untuk keluarga, hemat bahan bakar.</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="produk 1" class="card-img-top" alt="FORTUNER">
+            <div class="card-body">
+              <h5 class="card-title">FORTUNER</h5>
+              <p class="card-text">Ruang luas, cocok untuk keluarga, hemat bahan bakar.</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="produk 3" class="card-img-top" alt="RUSH">
+            <div class="card-body">
+              <h5 class="card-title">RUSH</h5>
+              <p class="card-text">Ruang luas, cocok untuk keluarga, hemat bahan bakar.</p>
+
+            </div>
+            </div>
+        </div>
+
+             <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="produk 4" class="card-img-top" alt="VOXY">
+            <div class="card-body">
+              <h5 class="card-title">VOXY</h5>
+              <p class="card-text">Ruang luas, cocok untuk keluarga, hemat bahan bakar.</p>
+
+            </div>
+            </div>
+        </div>
+
+             <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="produk 5" class="card-img-top" alt="RAIZE">
+            <div class="card-body">
+              <h5 class="card-title">RAIZE</h5>
+              <p class="card-text">Ruang luas, cocok untuk keluarga, hemat bahan bakar.</p>
+
+            </div>
+            </div>
+        </div>
+
+             <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="produk 6" class="card-img-top" alt="AGYA">
+            <div class="card-body">
+              <h5 class="card-title">AGYA</h5>
+              <p class="card-text">Ruang luas, cocok untuk keluarga, hemat bahan bakar.</p>
+
+            </div>
+            </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center mt-5">
+  <a href="produk.html" class="btn-bling-premium">
+    <span>Lihat Selengkapnya &raquo;</span>
+  </a>
+</div>
+
+  </div>
+</section>
+
+    <!-- Layanan -->
+    <section id="layanan" class="mt-5">
+      <h2 class="text-center mb-4 fw-bold">Layanan Kami</h2>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <i class="bi bi-tools display-4 text-warning"></i>
+          <h5 class="mt-3">Servis Berkala</h5>
+          <p>Perawatan mobil dengan teknisi profesional dan alat modern.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="bi bi-cash-stack display-4 text-warning"></i>
+          <h5 class="mt-3">Kredit Mudah</h5>
+          <p>Bekerja sama dengan lembaga keuangan terpercaya untuk kemudahan Anda.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="bi bi-headset display-4 text-warning"></i>
+          <h5 class="mt-3">Konsultasi Gratis</h5>
+          <p>Dapatkan rekomendasi mobil terbaik sesuai kebutuhan Anda.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Kontak -->
+    <section id="kontak" class="mt-5">
+      <h2 class="text-center fw-bold mb-4">Hubungi Kami</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form class="p-4 bg-light border rounded shadow-sm">
+            <div class="mb-3">
+              <label for="nama" class="form-label">Nama Lengkap</label>
+              <input type="text" class="form-control" id="nama" placeholder="Masukkan nama Anda">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda">
+            </div>
+            <div class="mb-3">
+              <label for="pesan" class="form-label">Pesan</label>
+              <textarea class="form-control" id="pesan" rows="4" placeholder="Tulis pesan Anda..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-custom w-100">Kirim Pesan</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 ShowroomMobil. Semua Hak Dilindungi.</p>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
